@@ -1,0 +1,20 @@
+.box {
+    width: 300px;
+    height: 600px;
+    margin: 30px;
+}
+.box1 {
+    background-color: yellow;
+}
+.box2 {
+    background-color: orange;
+}
+.box3 {
+    background-color: green;
+}
+.box4 {
+    background-color: cyan;
+}
+body {
+    display: flex;
+}

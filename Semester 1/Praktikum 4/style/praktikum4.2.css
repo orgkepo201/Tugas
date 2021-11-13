@@ -1,0 +1,87 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+.color {
+    background-color: lightgray;
+}
+.nav {
+    padding: 10px;
+}
+.ul1 {
+    display: flex;
+}
+.li1 {
+    margin-right: 55px;
+}
+.cat {
+    margin-right: 5px;
+    list-style-type: none;
+}
+.icon {
+    list-style-type: none;
+    margin-right: 10px;
+}
+.icon1 {
+    margin-left: auto;
+}
+hr.new1 {
+    border: 1px solid black;
+}
+.div {
+    margin-top: 50px;
+}
+.p1 {
+    font-size: x-large;
+}
+.td1 {
+    text-align: left;
+    padding: 20px;
+}
+.box {
+    width: 300px;
+    height: 350px;
+    background-color: lightgray;
+    box-sizing: border-box;
+}
+.left {
+    padding-left: 10px;
+    padding-right: 110px;
+}
+.align {
+    text-align: right;
+}
+.kiri {
+    padding-left: 10px;
+}
+.new2 {
+    border: 1px solid white;
+}
+.p2 {
+    text-align: right;
+}
+.p3 {
+    text-align: left;
+}
+.total {
+    padding-left: 50px;
+}
+.h3 {
+    padding-top: 5px;
+}
+.nav1 {
+    padding-top: 5px;
+    padding-left: 10px;
+}
+.ul2 {
+    display: flex;
+    list-style-type: none;
+}
+.padding {
+    padding-right: 10px;
+}
+.bank {
+    padding-left: 35px;
+}
+.kanan {
+    padding-left: 80%;
+}

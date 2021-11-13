@@ -1,0 +1,39 @@
+.box1 {
+    width: 15%;
+    height: 80px;
+    background-color: yellow;
+    margin-right: 20px;
+}
+.box2 {
+    width: 90%;
+    height: 80px;
+    background-color: orange;
+}
+.box {
+    display: flex;
+    margin: 10px;
+}
+.box3 {
+    width: 15%;
+    height: 420px;
+    background-color: green;
+    margin-right: 20px;
+}
+.box4 {
+    width: 73%;
+    height: 420px;
+    background-color: lightgray;
+    margin-right: 20px;
+
+}
+.box5 {
+    width: 15%;
+    height: 420px;
+    background-color: cyan;
+}
+.box6 {
+    width: 98.5%;
+    height: 80px;
+    background-color: blue;
+    margin-left: 10px;
+}

@@ -1,0 +1,31 @@
+.box1{
+    width: 98%;
+    height: 100px;
+    background-color: green;
+    margin: 10px;
+    margin-bottom: 30px;
+}
+.box2 {
+    width: 200px;
+    height: 200px;
+    background-color: yellow;
+    margin-right: 50px;
+    margin-left: 10px;
+}
+.box3 {
+    width: 1073px;
+    height: 200px;
+    background-color: orange;
+}
+.box {
+    display: flex;
+    margin-bottom: 50px;
+}
+.boxx {
+    display: flex;
+}
+.box4 {
+    width: 1073px;
+    height: 200px;
+    background-color: cyan;
+}
