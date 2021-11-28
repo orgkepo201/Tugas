@@ -1,0 +1,45 @@
+body {
+    background: pink;
+}
+* {
+    box-sizing: border-box;
+}
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    /* border: 1px solid; */
+    height: 600px;
+    flex: 1;
+    text-align: center;
+    flex-direction: column;
+    gap: 20px;
+}
+#main {
+    display: flex;
+    flex: 1;
+    gap: 20px;
+}
+#main > aside {
+    flex: ;
+    line-height: 400px;
+}
+#main > article {
+    flex: 1;
+}
+header, footer {
+    background: lightgreen;
+    height: 50px;
+    line-height: 50px;
+}
+aside {
+    background: lightgreen;
+    width: 200px;
+    /* margin-right: 20px; */
+}
+article {
+    background-color: rgb(255, 98, 98);
+}
+img {
+    width: 200px;
+    height: 200px;
+}
