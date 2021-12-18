@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luas dan Keliling Lingkaran</title>
+</head>
+<body>
+    <label for="jarijari">Jari-Jari</label>
+    <input type="number" id="jarijari">
+    <br>
+    <br>
+    <label for="luas">Luas</label>
+    <input type="text" id="luas">
+    <button onclick="jumlahLuas()">Hitung</button>
+    <br>
+    <br>
+    <label for="keliling">Keliling</label>
+    <input type="text" id="keliling">
+    <button onclick="jumlahKeliling()">Hitung</button>
+
+    <script>
+        function jumlahLuas() {
+            let jarijari = document.getElementById('jarijari')
+            let luas = document.getElementById('luas')
+            
+            if (jarijari.value) {
+                luas.value = 3.14 * jarijari.value * jarijari.value
+            }
+        }
+        function jumlahKeliling() {
+            let jarijari = document.getElementById('jarijari')
+            let keliling= document.getElementById('keliling')
+            
+            if (jarijari.value) {
+                keliling.value = 2 * 3.14 * jarijari.value
+            }
+        }
+    </script>
+</body>
+</html>

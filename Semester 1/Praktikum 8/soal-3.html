@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biaya Parkir</title>
+</head>
+<body>
+    <label for="lamaParkir">Lama Parkir</label>
+    <input type="number" id="lamaParkir">
+    <br>
+    <br>
+    <button onclick="waktuParkir()">Hitung</button>
+    <br>
+    <br>
+    <label for="biayaParkir">Biaya Parkir</label>
+    <input type="number" id="biayaParkir">
+
+    <script>
+        function waktuParkir() {
+            const lamaParkir = document.getElementById('lamaParkir')
+            const biayaParkir = document.getElementById('biayaParkir')
+        
+            if (lamaParkir.value == 2) {
+                biayaParkir.value = 3000;
+            }
+            else if (lamaParkir.value >2) {
+                biayaParkir.value = lamaParkir.value * 1000 + 1000;
+            }
+        }
+    </script>
+</body>
+</html>

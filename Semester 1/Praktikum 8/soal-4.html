@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hitung Jumlah Dua Bilangan</title>
+</head>
+<body>
+    <input type="number" id="hitung1" value="" onchange="hitung()">
+    <br>
+    +
+    <br>
+    <input type="number" id="hitung2" value="" onchange="hitung()">
+    <br>
+    =
+    <br>
+    <input type="number" id="hasil" value="">
+
+    <script>
+        function hitung() {
+            let hitung1 = document.getElementById('hitung1')
+            let hitung2 = document.getElementById('hitung2')
+            let hasil = document.getElementById('hasil')
+
+            document.getElementById('hasil').value = Number(hitung1.value) + Number(hitung2.value)
+        }
+    </script>
+</body>
+</html>
