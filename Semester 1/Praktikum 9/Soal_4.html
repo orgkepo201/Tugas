@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Picker</title>
+</head>
+<body>
+    <select name="" id="daftar" onchange="tampil()">
+        <option value="">Pilih Gambar</option>
+        <option value="volkath">Volkath</option>
+        <option value="maloch">Maloch</option>
+        <option value="telanas">Tel'Anas</option>
+        <option value="ilumia">Ilumia</option>
+        <option value="thane">Thane</option>
+        <option value="arthur">Arthur</option>
+        <option value="dirak">Dirak</option>
+    </select>
+    <div id="hasil"></div>
+
+    <script>
+        let daftar = document.getElementById('daftar');
+        let hasil = document.getElementById('hasil');
+
+        function tampil() {
+            switch (daftar.value) {
+                case "volkath":
+                    hasil.innerHTML = '<img src="img/Volkath.jpg">'
+                    alert('Dia Dijuluki THE BLACK APOSTATE')
+                    break;
+            }
+            switch (daftar.value) {
+                case "maloch":
+                    hasil.innerHTML = '<img src="img/Maloch.jpg">'
+                    alert('Dia Dijuluki LORD OF THE ABYYS')
+                    break;
+            }
+            switch (daftar.value) {
+                case "telanas":
+                    hasil.innerHTML = '<img src="img/TelAnas.jpg">'
+                    alert('Dia Dijuluki AGELESS')
+                    break;
+            }
+            switch (daftar.value) {
+                case "ilumia":
+                    hasil.innerHTML = '<img src="img/Ilumia.jpg">'
+                    alert('Dia Dijuluki THE SEER')
+                    break;
+            }
+            switch (daftar.value) {
+                case "thane":
+                    hasil.innerHTML = '<img src="img/Thane.jpg">'
+                    alert('Dia Dijuluki THE LEGENDARY MONARCH')
+                    break;
+            }
+            switch (daftar.value) {
+                case "arthur":
+                    hasil.innerHTML = '<img src="img/Arthur.jpg">'
+                    alert('Dia Dijuluki THE CHOSEN')
+                    break;
+            }
+            switch (daftar.value) {
+                case "dirak":
+                    hasil.innerHTML = '<img src="img/Dirak.png">'
+                    alert('Dia Dijuluki SUPREME MAGE')
+                    break;
+            }
+        }
+    </script>
+</body>
+</html>

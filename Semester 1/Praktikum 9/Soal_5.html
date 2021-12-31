@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .tampilanError {
+            color: red;
+        }
+    </style>
+    <title>Form Validation</title>
+</head>
+<body>
+  
+    <h1>Pesan Tiket</h1>
+    <div id="w1">
+        <label for="nama">Nama Pelanggan</label>
+        <small style="display: none;"  id="err1" class="tampilanError">Nama Wajib Diisi!</small>
+        <small style="display: none;"  id="err1_2" class="tampilanError">Nama Maksimal 30 Karakter!</small>
+        <input type="text" id="nama">
+        <br>
+        <br>
+        <label for="email">Email</label>
+        <small style="display: none;" id="err2" class="tampilanError">Email Wajib Diisi!</small>
+        <small style="display: none;" id="err2_2" class="tampilanError">Format Email Tidak Sesuai!</small>
+        <input type="text" id="email">
+        <br>
+        <br>
+        <label for="jam">Jam</label>
+        <small style="display: none;"  id="err3" class="tampilanError">Jam Keberangkatan Wajib Diisi!</small>
+        <small style="display: none;"  id="err3_2" class="tampilanError">Format Jadal Tidak Sesuai!</small>
+        <input type="number" id="jam">
+        <br>
+        <br>
+        <label for="tujuan">Tujuan</label>
+        <small style="display: none;"  id="err4" class="tampilanError">Tujuan Keberangkatan Wajib Diisi!</small>
+        <input type="text" id="tujuan">
+        <br>
+        <br>
+        <label for="tiket">Jumlah Tiket</label>
+        <small style="display: none;"  id="err5" class="tampilanError">Jumlah Tiket Wajib Diisi!</small>
+        <small style="display: none;"  id="err5_2" class="tampilanError">Jumlah Tiket Maksimal 10!</small>
+        <input type="number" id="tiket">
+        <br>
+        <br>
+        <button onclick="submit()">Submit</button>
+    </div>
+
+    <div id="w2" style="display: none;">
+        <h1>Admin RPR</h1>
+        <strong>Mendata Bahwa</strong>
+        <br>
+        <br>
+        <table>
+            <tbody>
+                <tr>
+                    <td>Nama Pelanggan</td>
+                    <td id="v1"></td>
+                </tr>
+                <tr>
+                    <td>Jadwal Keberangkatan</td>
+                    <td id="v2"></td>
+                </tr>
+                <tr>
+                    <td>Jam Keberangkatan</td>
+                    <td id="v3"></td>
+                </tr>
+                <tr>
+                    <td>Tujuan Keberangkatan</td>
+                    <td id="v4"></td>
+                </tr>
+                <tr>
+                    <td>Tiket</td>
+                    <td id="v5"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+        function submit() {
+            let nama = document.getElementById('nama').value;
+            let email = document.getElementById('email').value;
+            let jam = document.getElementById('jam').value;
+            let tujuan = document.getElementById('tujuan').value;
+            let tiket = document.getElementById('tiket').value;
+            
+            if(submit) {
+                function validasiEmail(email) {
+                    const re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+                    return re.test(email);
+                }
+                let err1 = document.getElementById('err1');
+                let err1_2 = document.getElementById('err1_2');
+                let err2 = document.getElementById('err2');
+                let err2_2 = document.getElementById('err2_2');
+                let err3 = document.getElementById('err3');
+                let err3_2 = document.getElementById('err3_2');
+                let err4 = document.getElementById('err4');
+                let err5 = document.getElementById('err5');
+                let err5_2 = document.getElementById('err5_2');
+
+                let v1 = document.getElementById('v1');
+                let v2 = document.getElementById('v2');
+                let v3 = document.getElementById('v3');
+                let v4 = document.getElementById('v4');
+                let v5 = document.getElementById('v5');
+
+                // const batasNama = 30
+                const batasJam = 24.00
+                const batasTiket = 10
+
+                let errorNama = [];
+                if (nama == '') {
+                    console.log('Nama Wajib Diisi!');
+                    errorNama[0] = err1.style.display = 'block';
+                }
+                else if (nama.length >30) {
+                    console.log('Nama Melebihi 30 Karakter!');
+                    errorNama[1] = err1_2.style.display = 'block';
+                }
+
+                let errorEmail = [];
+                if (email == '') {
+                    console.log('Email Wajib Diisi!');
+                    errorEmail[0] = err2.style.display = 'block'
+                }
+                else if (!validasiEmail(email)) {
+                    // console.log(err2_2)
+                    console.log('Format Email Tidak Sesuai!');
+                    errorEmail[1] = err2_2.style.display = 'block'
+                }
+
+                let errorJam = [];
+                if (jam == '') {
+                    console.log('Jam Wajib Diisi!');
+                    errorJam[0] = err3.style.display = 'block';
+                }
+                else if (jam > batasJam) {
+                    console.log('Jam Tidak Sesuai Format!');
+                    errorJam[1] = err3_2.style.display = 'block';
+                }
+
+                let errorTujuan = [];
+                if (tujuan == '') {
+                    console.log('Tujuan Wajib Diisi');
+                    errorTujuan[0] = err4.style.display = 'block';
+                }
+
+                let errorTiket = [];
+                if (tiket == '') {
+                    console.log('Jumlah Tiket Wajib Diisi');
+                    errorTiket[0] = err5.style.display = 'block';
+                }
+                else if (tiket > batasTiket) {
+                    console.log('Nama Melebihi 30 Karakter');
+                    errorTiket[1] = err5_2.style.display = 'block';
+                }
+
+                if (nama != '' && (email != '' && validasiEmail(email)) && jam != '' && tujuan != '' && tiket != '') {
+                    v1.innerHTML = nama;
+                    v2.innerHTML = email;
+                    v3.innerHTML = jam;
+                    v4.innerHTML = tujuan;
+                    v5.innerHTML = tiket;
+
+                    let w1 = document.getElementById('w1')
+                    let w2 = document.getElementById('w2')
+
+                    w1.style.display = 'none';
+                    w2.style.display = 'grid';
+                }
+            } 
+        }
+    </script>
+</body>
+</html>

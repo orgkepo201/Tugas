@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kurs Rupiah</title>
+</head>
+<style>
+    .container {
+        width: 500px;
+        height: 200px;
+
+    }
+    table, tr, th, td{
+        border: 2px solid;
+    }
+    fieldset {
+        background-color: yellow;        
+    }
+</style>
+
+<body>
+    <div class="container">
+        <fieldset>
+            <legend>Kurs Rupiah - Mata Uang Asing</legend>
+            <table>
+                <tr>
+                    <th>Masukan Nilai</th>
+                    <th>Valas</th>
+                    <th>Nilai Rupiah</th>
+                </tr>
+                <tr>
+                    <td><input type="number" name="money_val" id="money_val"></td>
+                    <td>
+                        <select onchange="countMoney();" name="currency_select" id="currency_select">
+                            <option id="currency_default" value="not_select">Pilih Daftar Mata Uang</option>
+                            <option id="currency_1" value="dolar_us">Dollar Us</option>
+                            <option id="currency_2" value="dolar_singapore">Dollar Singapore</option>
+                            <option id="currency_3" value="ringgit_malaysia">Ringgit Malaysia</option>
+                            <option id="currency_4" value="yen_jepang">Yen Jepang</option>
+                            <option id="currency_5" value="euro">Euro</option>
+                            <option id="currency_6" value="riyal_arab">Riyal Arab Saudi</option>
+                        </select>
+                    </td>
+                    <td>
+                        <div id="result"></div>
+                    </td>
+                </tr>
+        </div>
+        </fieldset>
+    </div>
+
+    <script>
+        function countMoney() {
+            var user_input = document.getElementById('money_val').value;
+            var currency_select = document.getElementById('currency_select').value;
+            var currency_default = document.getElementById('currency_default').value;
+            var currency_1 = document.getElementById('currency_1').value;
+            var currency_2 = document.getElementById('currency_2').value;
+            var currency_3 = document.getElementById('currency_3').value;
+            var currency_4 = document.getElementById('currency_4').value;
+            var currency_5 = document.getElementById('currency_5').value;
+            var currency_6 = document.getElementById('currency_6').value;
+            var result = 0;
+
+            if (currency_select == currency_default) {
+                result = result;
+
+            } else if (currency_select == currency_1) {
+                result = user_input * 9915;
+                document.getElementById('result').innerHTML = result;
+
+            } else if (currency_select == currency_2) {
+                result = user_input * 13472;
+                document.getElementById('result').innerHTML = result;
+
+            } else if (currency_select == currency_3) {
+                result = user_input * 874;
+                document.getElementById('result').innerHTML = result;
+
+            } else if (currency_select == currency_4) {
+                result = user_input * 120;
+                document.getElementById('result').innerHTML = result;
+
+            } else if (currency_select == currency_5) {
+                result = user_input * 15888;
+                document.getElementById('result').innerHTML = result;
+
+            } else {
+                result = user_input * 3592;
+                document.getElementById('result').innerHTML = result;
+
+            }
+        }
+    </script>
+</body>
+</html>
