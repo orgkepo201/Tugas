@@ -1,0 +1,53 @@
+.container-fluid {
+    display: flex;
+}
+.row {
+    display: flex;
+    align-items: center;
+    padding-top: 20px;
+}
+.button {
+    color: yellow;
+    background-color: green;
+}
+.ul, .icon {
+    display: flex;
+    list-style-type: none;
+    gap: 10px;
+}
+.icon {
+    margin-left: auto;
+
+}
+.row2 {
+    align-items: center;
+    text-align: center;
+}
+.row3 {
+    /* display: flex; */
+}
+.row4 {
+    text-align: center;
+    align-items: center;
+}
+.img {
+    width: 150px;
+    height: 150px;
+    margin: 20px;
+}
+.imgg {
+    gap: 60px;
+}
+.foot {
+    list-style-type: none;
+    color: white;
+}
+.person {
+    display: flex;
+}
+.color {
+    background-color: darkblue;
+}
+.color2 {
+    background-color: lightgray;
+}
